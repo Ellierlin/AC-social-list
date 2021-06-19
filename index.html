@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="stylesheet" href="./style.css">
+  <title>User List</title>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">User List</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="file:///Users/yongqilin/Desktop/ALPHA%20Camp%20%E5%AD%B8%E6%9C%9F%E4%BA%8C/2-2/A11%EF%BC%9A%E4%BD%A0%E7%9A%84%E7%A4%BE%E7%BE%A4%E5%90%8D%E5%96%AE%EF%BC%9A%E6%89%8B%E5%88%BB%E5%8A%9F%E8%83%BD/favorite.html?">Favorite</a>
+          </li>
+        </ul>
+        <form class="d-flex" id="search-form">
+          <input class="form-control me-2" type="search" id="search-input" placeholder="Name ..." aria-label="Search">
+          <button class="btn btn-secondary" type="submit" id="search-submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Card -->
+  <div class="container m-5">
+    <div class="row d-flex justify-content-evenly" id="data-panel">
+      <!-- Render User List -->
+      <!-- <div class="col-sm-auto">
+        <div class="card mb-5">
+          <div class="card-body">
+            <img src="https://randomuser.me/api/portraits/men/88.jpg" class="card-img mb-2" alt="avatar"
+              data-bs-toggle="modal" data-bs-target="#user-modal">
+            <p class="card-title">Guillaume Vincent</p>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-secondary btn-add-favorite">+</button>
+          </div>
+        </div>
+      </div> -->
+    </div>
+  </div>
+
+  <!-- Paginator -->
+  <nav aria-label="Page navigation">
+    <ul class="pagination justify-content-center" id="paginator">
+      <!-- <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li> -->
+    </ul>
+  </nav>
+
+  <!-- User Modal -->
+  <div class="modal fade" id="user-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="user-modal-title"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="user-modal-body">
+          <div class="row">
+            <div class="col-sm-5" id="user-modal-img">
+              <!-- <img src="https://randomuser.me/api/portraits/men/88.jpg" alt="avatar" class="avatar-img"> -->
+            </div>
+            <div class="user-info col-sm-7">
+              <p id="user-modal-name"></p>
+              <p id="user-modal-gender"></p>
+              <p id="user-modal-age"></p>
+              <p id="user-modal-birthday"></p>
+              <p id="user-modal-region"></p>
+              <p id="user-modal-email"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+  <script src="./index.js"></script>
+</body>
+
+</html>
